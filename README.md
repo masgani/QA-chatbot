@@ -59,7 +59,29 @@ The system uses a deterministic multi-phase pipeline:
    Combines evidence from database and documents into a final answer
    with citations and a quality score.
 
-### Execution method（Docker recommended）
+## Data Setup (Required)
+
+Raw datasets and documents are intentionally not included in this repository.
+
+The `data/` directory is located at the **project root level**, alongside the
+application code and Docker configuration files.
+
+Before running the application, please prepare the following **data/** structure:
+
+app/
+├── ...
+data/
+├── raw/
+│   ├── fraudTrain.csv
+│   ├── fraudTest.csv (optional)
+│   ├── Bhatla.pdf
+│   ├── EBA_ECB 2024 Report on Payment Fraud.pdf
+└── processed/
+
+
+### Execution method
+The application is designed to be started using Docker Compose.
+
 1. Clone the repository
 ```bash
 git clone https://github.com/masgani/QA-chatbot.git
@@ -75,6 +97,8 @@ docker compose up --build
 ```bash
 http://localhost:8501
 ```
+
+
 
 
 ## LLM Inference
