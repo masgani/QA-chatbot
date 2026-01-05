@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+matplotlib
+requests
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+pypdf
+faiss-cpu
+sentence-transformers
+openai>=1.0.0

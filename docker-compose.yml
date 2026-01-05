@@ -1,0 +1,30 @@
+services:
+  ingest:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    command: ["python", "-m", "app.core.ingest"]
+    volumes:
+      - ./data:/app/data
+    environment:
+      PYTHONPATH: /app
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    env_file:
+      - .env
+    command: ["streamlit", "run", "app/ui/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./:/app
+    environment:
+      PYTHONPATH: /app
+      PYTHONUNBUFFERED: "1"
+      STREAMLIT_SERVER_RUN_ON_SAVE: "true"
+      STREAMLIT_SERVER_FILE_WATCHER_TYPE: "poll"
+    depends_on:
+      ingest:
+        condition: service_completed_successfully
