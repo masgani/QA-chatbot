@@ -68,6 +68,7 @@ application code and Docker configuration files.
 
 Before running the application, please prepare the following **data/** structure:
 
+```text
 app/
 ├── ...
 data/
@@ -77,7 +78,7 @@ data/
 │   ├── Bhatla.pdf
 │   ├── EBA_ECB 2024 Report on Payment Fraud.pdf
 └── processed/
-
+```
 
 ### Execution method
 The application is designed to be started using Docker Compose.
