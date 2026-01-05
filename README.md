@@ -150,3 +150,15 @@ are not fully parsed or semantically structured. As a result:
 
 This limitation is common in text-based RAG systems and can be addressed in future work
 using layout-aware document parsing or multimodal models.
+
+## Documentations
+Video documentation
+
+[![Teks Alternatif](https://img.youtube.com/vi/Na7UoBTK5B8/0.jpg)](https://youtu.be/Na7UoBTK5B8)
+link : https://youtu.be/Na7UoBTK5B8
+
+1st screenshot
+![generalQA](https://github.com/user-attachments/assets/ca0933ff-67a6-4cc3-ab84-ba849a2382d2)
+
+2nd screenshot
+![RAGQA](https://github.com/user-attachments/assets/a4f76027-a58c-4972-a8b4-75bb0899b6de)
